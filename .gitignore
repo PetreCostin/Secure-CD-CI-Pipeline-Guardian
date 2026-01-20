@@ -179,3 +179,20 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+.codersinflow
+.vscode
+node_modules
+.codex
+out
+dist
+*.vsix
+.claude
+CLAUDE.md
+.DS_Store
+.git
+*.tmp
+__pycache__
+*.pyc
+.env.local
+.next
+.github
