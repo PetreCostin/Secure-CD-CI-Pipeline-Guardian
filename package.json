@@ -1,0 +1,9 @@
+{
+  "name": "secure-ci-cd-pipeline-guardian",
+  "version": "1.0.0",
+  "description": "A secure CI/CD pipeline guardian application - Python based",
+  "scripts": {
+    "build": "echo 'Build completed for Python project'",
+    "start": "python3 src/main.py"
+  }
+}

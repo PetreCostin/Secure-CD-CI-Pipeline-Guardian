@@ -1,0 +1,92 @@
+{
+  "project": ".",
+  "timestamp": "2026-01-14T20:51:29.512302",
+  "status": "FAIL",
+  "statistics": {
+    "critical": 3,
+    "high": 4,
+    "medium": 1,
+    "low": 1,
+    "total": 9
+  },
+  "findings": [
+    {
+      "type": "SECRET",
+      "severity": "HIGH",
+      "file": "example_code.py",
+      "line": 4,
+      "rule": "GENERIC_PASSWORD",
+      "message": "Potential GENERIC_PASSWORD detected",
+      "match": "password = \"super_se***"
+    },
+    {
+      "type": "SECRET",
+      "severity": "CRITICAL",
+      "file": "example_code.py",
+      "line": 7,
+      "rule": "AWS_ACCESS_KEY",
+      "message": "Potential AWS_ACCESS_KEY detected",
+      "match": "AKIAIOSFODNN7EXAMPLE"
+    },
+    {
+      "type": "SECRET",
+      "severity": "HIGH",
+      "file": "test_code.py",
+      "line": 4,
+      "rule": "GENERIC_PASSWORD",
+      "message": "Potential GENERIC_PASSWORD detected",
+      "match": "password = \"super_se***"
+    },
+    {
+      "type": "SECRET",
+      "severity": "CRITICAL",
+      "file": "test_code.py",
+      "line": 7,
+      "rule": "AWS_ACCESS_KEY",
+      "message": "Potential AWS_ACCESS_KEY detected",
+      "match": "AKIAIOSFODNN7EXAMPLE"
+    },
+    {
+      "type": "DEPENDENCY",
+      "severity": "CRITICAL",
+      "package": "log4j",
+      "current_version": "2.15.0",
+      "safe_version": "2.16.0",
+      "rule": "Log4Shell - Remote Code Execution",
+      "message": "Vulnerable log4j@2.15.0: Log4Shell - Remote Code Execution"
+    },
+    {
+      "type": "DEPENDENCY",
+      "severity": "HIGH",
+      "package": "pyyaml",
+      "current_version": "5.3.0",
+      "safe_version": "5.4.0",
+      "rule": "PyYAML unsafe load vulnerability",
+      "message": "Vulnerable pyyaml@5.3.0: PyYAML unsafe load vulnerability"
+    },
+    {
+      "type": "DOCKER",
+      "severity": "MEDIUM",
+      "file": "Dockerfile",
+      "line": 1,
+      "rule": "LATEST_IMAGE",
+      "message": "Using 'latest' tag - unpredictable builds"
+    },
+    {
+      "type": "DOCKER",
+      "severity": "LOW",
+      "file": "Dockerfile",
+      "line": 5,
+      "rule": "EXPOSED_PORTS",
+      "message": "Port exposed - verify it's intentional"
+    },
+    {
+      "type": "DOCKER",
+      "severity": "HIGH",
+      "file": "Dockerfile",
+      "line": 10,
+      "rule": "RUN_AS_ROOT",
+      "message": "Missing USER directive - container runs as root"
+    }
+  ]
+}
